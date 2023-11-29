@@ -1,0 +1,934 @@
+html{
+    display:flex; 
+    justify-content: center;
+    scroll-behavior: smooth;
+ 
+}
+
+/*med dette så vil det være sentrert på skjermen og skrolling vil være mye finere*/
+
+a { color: inherit; } 
+/*vil fjerne det "blået" i links*/
+
+
+/*importert google fonts roboto*/
+body{
+    display: grid;
+
+    font-family: 'Roboto', sans-serif;
+    max-width: 1600px;
+    /*oppgaven ville ha et maksbredde på 1600px*/
+  
+}
+
+p{
+    transition: font-size 0.5s ease;
+}
+/* Definerer et grid-container som inneholder header, main og footer hentet fra Ann Charlottes repo 
+
+https://github.com/HIO-Webutvikling/WEBUTVIKLING2023/blob/main/FLEX-OG-GRID/css/style.css*/
+#grid-container {
+    display: grid;
+    grid-template-areas: "header" "main" "footer";
+    
+}
+/*skip link funksjon har jeg spurt chatGPT om å lage*/
+#skip-link {
+    position: fixed;
+    bottom:14%;
+    right: 5%;
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    z-index: 1000;
+    height: 30px;
+    text-decoration: none;
+    transition: top 0.3s;
+}
+
+
+
+@media only screen and (min-width: 600px) {
+    /* Endrer grid-malen for bredere skjermer */ /*dette er hentet fra Ann Charlottes Github repo fra en tidligere forelesning
+    https://github.com/HIO-Webutvikling/WEBUTVIKLING2023/blob/main/FLEX-OG-GRID/css/style.css*/
+    #grid-container {
+        grid-template-areas: "header header header" "main main main" "footer footer footer";
+    }
+
+}
+ /* padding header main og footer*/
+header, main, footer {
+    padding: 1rem;
+}
+ /* definerer at header er header med grid-area. litt styling med fonts-size og weight*/
+header {
+    grid-area: header;
+    font-size: 1.5rem;
+    font-weight: 600;
+    overflow: hidden; 
+}
+ /* styling for logo*/
+.logo{
+    width: 80px;
+    height: 80px;
+    margin-left: 20px;
+    margin-top: 10px;
+}
+ /* styling for nav*/
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+ /* salle de tre tre sectionsene er for de ulike nettsidene når det bytter mellom, 
+ så vil det være en gul understrek som indikerer hvor man er */
+#index{
+    text-decoration: underline;
+    text-decoration-color: #e6bd43;
+    text-decoration-thickness: 3px;
+   
+}
+
+
+
+#products{
+    text-decoration: underline;
+    text-decoration-color: #e6bd43;
+    text-decoration-thickness: 3px;
+
+}
+
+#about{
+    text-decoration: underline;
+    text-decoration-color: #e6bd43;
+    text-decoration-thickness: 3px;
+
+}
+
+ /* styling for navbar */
+
+.navbar{
+    display: flex;
+list-style-type: none;
+margin-top: 40px;
+margin-right: 20px;
+}
+
+.navbar li{
+    margin-left: 10px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.navbar a{
+    color: black;
+    text-decoration: none;
+ 
+}
+
+ /* styling for contactborder knapp*/
+.contactborder{
+    text-decoration:none;
+    border-style:solid;
+    border-color:#e6bd43;
+    background-color:#e6bd43;
+    border-width: 10px;
+}
+  /* styling for contactborder knapp når musepeker er over*/
+.contactborder:hover{
+ border-color: black;
+ background-color: black;
+ color: #e6bd43;
+}
+ /* styling for  knapp når musepeker er over*/
+#ourcompanybox a:hover{
+    color: #e6bd43;
+}
+
+/* maks høyde for headline*/
+.compelingheadline { max-height: 400px;
+
+
+}
+/* styling for å få tekst i midten*/
+.compelingheadline h1{display: flex;
+justify-content: center;
+flex-shrink: inherit;}
+/* styling for å få tekst i midten av så det ikke holder seg til "kanten" */
+.compelingheadline p{
+    text-align: center;
+}
+
+h1{
+    font-size: xx-large;
+}
+
+
+
+
+/* styling for backgroundvideo der jeg har fått koden fra ChatGPT 
+https://chat.openai.com/*/
+#backgroundvideo{
+  width: 100%;
+   overflow: hidden;
+position: relative;
+max-height: 400px;
+object-fit: cover;
+filter:opacity(40%) ;
+}
+
+/* dette er for å ha tekst over video*/
+.headline{
+    display: flex;
+   flex-direction: column;
+    text-align: center;
+    position: absolute;
+    z-index: 1;
+    top: 200px;
+    max-height: 200px;
+    max-width: 1600px;
+
+}
+/* margin med p */
+.headline p{
+    margin-left: 80px;
+    margin-right: 80px;
+}
+/* styling for read-more knapp*/
+.Read-more {
+    display: inline-block;
+    text-decoration:none;
+    border-style:solid;
+    border-color:#e6bd43;
+    background-color:#e6bd43;
+    border-width: 10px;
+    max-width: 1600px;
+    margin-left: 35%;
+    margin-right: 35%;
+}
+
+/* styling for read-more knapp når musepeker er over*/
+.Read-more:hover{
+    border-color: black;
+    background-color: black;
+    color: #e6bd43;
+}
+/* styling for engaging section*/
+.engaging{display: flex;
+flex-wrap: wrap;
+justify-content: center;
+}
+/* styling for engaging section*/
+.engaging h2{ 
+    margin-left: 50px;
+    margin-right: 50px;
+}
+/* styling for engaging section*/
+.engaging p{
+    margin-left: 100px;
+    margin-right: 100px;
+    text-align: center;
+}
+/* styling for about our section*/
+.aboutour{
+margin-top: 0px;
+margin-left: 0px;
+margin-right: 0px;
+
+
+display: flex;
+background-color: #e6bd43;
+}
+
+/* styling for artikkelkort i produktsiden*/
+.box{  
+    display: flex;
+    min-width: 300px; 
+    max-width: 692px;
+    transition: transform 0.3s ease;
+    margin: 2rem;
+    flex-grow: 1; 
+
+}
+
+/* styling for artikkelkort i produktsiden slik at den blir større når du holder over*/
+.pictures:hover{
+    transform: scale(1.05)
+}
+/* styling for box-right*/
+.box-right{margin-left: 20px;
+margin-top: 60px;
+margin-right: 20px;}
+/* styling for rmabout knapp*/
+.rmabout{
+    text-decoration:none;
+    border-color:black;
+    background-color:white;
+    border-width: 2px;
+height: 40px;}
+
+.rmabout:hover{
+    border-color: black;
+    background-color: black;
+    color: #e6bd43;
+}
+/* styling for our-services id*/
+#our-services{
+    display: flex;
+flex-wrap: wrap;
+flex-grow: 1;
+justify-content: center;
+flex-direction: column;
+margin-bottom: 50px;
+   
+}
+/* styling for our-services id*/
+#our-services h4{
+display: flex;
+justify-content: center;
+font-size: xx-large;
+} 
+/* styling for our-services id*/
+#our-services p {
+    display: flex;
+    justify-content: center;
+}
+/* styling for ulike seksjonene i our services*/
+.four{  display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+margin-left: 50px;
+margin-right: 50px;
+margin-bottom: 50px}
+
+.four h5{
+    font-weight: 1000;
+}
+
+.four i{
+   color: black;
+   justify-items: center;
+   font-size: xx-large;
+}
+
+/* brukt grid istedet for flex for dette*/
+.branding{
+    display: grid;
+    text-align: center;
+    justify-content: center;
+}
+
+.branding p{
+    display: grid;
+    text-align: center;
+    justify-content: center;
+}
+
+
+/* styling for epost seksjon Hentet fra ChatGPT og w3schools*/
+                .newsletter{
+                    display: flex;
+                    justify-content: center;
+                    background-color: lightgrey;
+                }
+
+                .newsletter h5{
+                    display: flex;
+                    justify-content: center;
+                    font-weight: 1000;
+            
+                }
+                .newsletter button{
+                    font-weight: 1000;
+                }
+/* styling for .ramme */
+                .ramme{  text-decoration:none;
+
+                height: 33px;}
+
+                .email-box{margin-bottom: 40px;}
+/* styling for footer for alle tre sidene */
+              footer {
+              
+                    grid-area: footer;
+                   
+               
+                padding: 50px;
+                display: flex;
+                    flex-direction: row;
+                    background-color:#252525;
+                    justify-content: space-between;
+                   
+            
+                }
+
+                footer h6, i{color: white;
+                font-size: x-large;
+                text-align: center;}
+/* styling for footer .logo for å endre det siden logo i nav hadde margin fra før*/
+                footer .logo{
+                    margin: 0;
+                }
+                /* styling for ikoner i footer */
+                .iconsright {
+      
+                    display: flex;
+      
+                    gap: 10px; 
+                    margin-top: 55px;
+                }
+
+               
+                /*products*/
+
+                        /*styling for portofolio section*/
+                .portfolio{
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    text-align: center;
+            color: black;
+                filter: opacity(80%);
+
+                }
+
+                
+             
+              
+                
+            
+/*styling for portofolio bildet */
+                .pictureofphone{
+                    width: 100%;
+                    overflow: hidden;
+                 position: relative;
+                 max-height: 400px;
+                 max-width: 1600px;
+                 object-fit: cover;
+                 display: flex;
+                 filter:opacity(40%)
+               
+                }
+/*styling for tekst over bilde*/
+                .textoverpic {
+                    position: absolute;
+                    top: 50%; 
+                    left: 50%; 
+                    transform: translate(-50%, -50%);
+                    
+                  }
+/*explore section i products*/
+                .explore{
+                    display: flex;
+                    border-bottom:2px solid #e6bd43;
+                }
+
+                .explore h2{
+                    font-weight: 1000;
+                    font-size: xx-large;
+                    margin-left: 30px;
+                }
+
+                .explore h4{
+                    font-weight: 1000;
+                    font-size: xx-large;
+                }
+/*explore buttons styling som gir litt gap mellom dem*/
+                .explorebuttons{
+                    display: flex;
+                    gap: 20px;
+                    margin-left: 30px;
+                    margin-top: 30px;
+                         }
+/*button styling for de knappene i produktsiden*/
+                         .explorebtn{
+                            text-decoration:none;
+                            border-style:solid;
+                            border-color:rgb(0, 0, 0);
+                            background-color:white;
+                            border-width: 2px;
+                            height: 30px;
+                            width: 105px;
+                           
+                         }
+                         /*button styling for de knappene i produktsiden når musepekeren er over*/
+                         .explorebtn:hover{
+                            border-color: black;
+                         background-color: black;
+                         color: #e6bd43;
+
+                         }
+
+                         .explorebtn{
+                            display: flex;
+                            justify-content: center;
+                         }
+
+
+                         /*styling for selve seksjonen for de tre artikkelkortene*/
+                         .three{
+                            display: flex;
+                            flex-direction: row;
+                            flex-wrap: wrap;
+                        
+                         }
+                          /*styling for p som er under artikkelene*/
+                         .pictures p{
+                            display: flex;
+                            justify-content: center;
+                         }
+
+                         .pictures2{
+                            display: flex;
+                            flex-direction: row;
+                            flex-wrap: wrap;
+                        
+                         }
+
+                         .pictures3{
+                            display: flex;
+                            flex-direction: row;
+                            flex-wrap: wrap;
+                            justify-content: center;
+                         }
+                   /*about*/
+
+                        /*egen pictureofphone seksjon*/
+
+                        .pictureofphone4{
+                            width: 100%;
+                            overflow: hidden;
+                         position: relative;
+                         max-height: 400px;
+                         max-width: 1600px;
+                         object-fit: cover;
+                         display: flex;
+                         filter:opacity(100%)
+                       
+                        }
+                           /*about us boks*/
+                   #ourcompanybox{
+                    display: inline-block;
+                    flex-direction: column;
+                    position: absolute;
+                    width: 42%;
+                    top: 40%;
+                    left: 70%; 
+                    transform: translate(-50%, -50%);
+                    background-color: rgba(255, 255, 255, 0.7);
+                    padding: 40px;
+                    text-align: start;
+                    max-height: 330px;
+                    height: 330px;
+                    overflow: hidden;
+                    z-index: 1;
+                
+                }
+ /*about us boks*/
+                #ourcompanybox a{
+                    color: black;
+                    width: 140px;
+                }
+
+
+
+                 /*about us boks*/
+                #ourcompanybox p{
+               
+                    max-width: 100px;
+                    max-height: 100px;
+                }
+
+                 /*p class lorem. styling for egen p class*/
+                .lorem{
+                    font-size: small;
+                    display: flex;
+                    flex-wrap: wrap;
+         min-width: 464px;
+                    max-width: 580px;
+                    max-height: 80px
+                }
+
+                /*toppen av some of boks farge*/
+                   .someof{
+                    background-color: #e6bd43;
+                
+                   }
+
+                   /*someofbox styling*/
+                   .someofbox{
+                    display: flex;
+                    flex-direction: column;
+                   }
+                    /*someofbox styling spesifikt h5*/
+                   .someofbox h5{
+                    display: flex;
+                   justify-content: center;
+                   font-size: x-large;
+                   }
+                      /*someofbox styling spesifikt logoene som er i seksjonen*/
+                   .clients{
+                    display:flex;
+                    justify-content: center;
+                    padding-bottom: 30px;
+                   }
+
+
+               
+                    /*Med contact container har jeg skrevet ned kode som chatGPT har gitt meg men
+                    jeg har også brukt dette som utgangspunkt*/
+                 #contact-container {
+                    display: flex;
+                    justify-content: center;
+                    align-items: flex-start;
+                    padding: 50px;
+                    background-color: rgb(238, 236, 236);
+                }
+
+        
+                 /*litt skilling mellom de to boksene i contact container*/
+                .formbox, #info-box {
+                    margin: 0 20px;
+                }
+
+                  
+                
+                
+                h6 {
+                    color: black; 
+                    font-size: 20px;
+                }
+                
+                form {
+                    max-width: 400px; 
+                }
+                  /*dette er hva chatgpt har gitt meg i styling*/
+                input[type="text"],
+                textarea {
+                    width: 100%;
+                    padding: 10px;
+                    margin: 10px 0;
+                    border: 1px solid #ccc;
+                    border-radius: 4px; 
+                }
+                 /*dette er hva chatgpt har gitt meg i styling*/
+                #info-box {
+                    max-width: 400px; 
+                }
+                
+                #info-box p {
+                    margin-bottom: 10px;
+                }
+                 /*dette er hva chatgpt har gitt meg i styling*/
+                .contact-us-box{
+                    display: grid;
+                    grid-template-columns: 30px auto;
+                    padding: 10px;
+                    align-items: center;
+                }
+                 /*dette er forå gjøre ikonene mørke*/
+                .contact-us-box i{
+                    color: black;
+                
+                
+                
+                }
+                  /*maks bredde for message*/
+             #message{
+                max-width: 400px;
+             }
+
+                /*kontakt knapp styling som ligger i contact container*/
+                .contactbtn {
+                    background-color: #e6bd43; 
+                    color: rgb(0, 0, 0);
+                    padding: 10px 20px;
+                    border: none;
+                    border-radius: 4px;
+                    cursor: pointer;
+                    margin-top: 10px; 
+                }
+                
+                /*kontakt knapp styling som ligger i contact container når den går over*/
+                .contactbtn:hover {
+                    background-color: #0c0c0c; 
+                    color: #e6bd43;
+                }
+                /*styling for google maps*/
+                .maps{
+                    width: 100%;
+                    height: 300;
+                }
+                
+                  
+
+
+/*media queries*/
+
+
+                @media only screen and (max-width: 600px){
+                  /*Artikkel-kortene skal falle under hverandre ved nedskalering.*/
+                    .three{
+                        display: flex;
+                        flex-direction: row;
+                        flex-wrap: wrap;
+                        justify-content: center;
+                    }
+
+                      /*Artikkel-kortene skal falle under hverandre ved nedskalering.*/
+                    .pictures2{
+                        display: flex;
+                        flex-direction: row;
+                        flex-wrap: wrap;
+                        justify-content: center;
+                    }
+                      /*Artikkel-kortene/brandingen skal falle under hverandre ved nedskalering.*/
+                    .four {
+                        display: flex;
+                        flex-direction: column;
+                        
+                       
+                      }
+                    
+
+                    .aboutour{
+
+                        display: flex;
+                        flex-direction: column;
+
+                    }
+
+                    .aboutour p{
+
+                        display: flex;
+                        flex-direction: column;
+
+                    }
+  /*Artikkel-kortene i footer skal falle under hverandre ved nedskalering.*/
+                    footer{
+
+                        display: flex;
+                        flex-direction: column;
+
+                    }
+
+                    footer a{
+                       display: flex;
+                       justify-content: center;
+                    }
+  /*falle under hverandre med denne koden.*/
+                    .iconsright{
+
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: center;
+
+                    }
+
+                    .logo{
+                    
+
+                        display: flex;
+                       
+                       
+                     
+
+                    }
+
+                    footer a{
+                        width: 100%;
+                    }
+/*maks bredde for artikkelene var 692px*/
+                    .box-left{
+                        max-width: 692px;
+                        min-width: 200px;
+                        flex-grow: 1;
+                        transition: transform 0.3s ease;
+                        margin: 2rem;
+                    }
+/*maks bredde for artikkelene var 692px*/
+                    .box-right{
+                        max-width: 692px;
+                        min-width: 200px;
+                        flex-grow: 1;
+                        transition: transform 0.3s ease;
+                        margin: 2rem;
+                    }
+
+
+                    .box-right h3{
+                        display: flex;
+                        justify-content: center;
+                    }
+/*maks bredde for artikkelene var 692px*/
+                    .box{
+                        display: flex;
+                        justify-content: center;
+                      flex-grow: initial;
+                      max-width: 692px;
+                    }
+/*for å ha knappen i senter*/
+                    .rmabout{
+                        display: flex;
+                        justify-content: center;
+                    }
+
+            
+/*for å ha header nav falle under hverandre*/
+                    header nav{
+                        display: flex;
+                        flex-direction: column;
+                        text-align: center;
+                    
+                    }
+/*for å ha nav falle under hverandre*/
+                    .navbar {
+                        display: flex;
+                        flex-direction: column;
+                       
+                        
+                    }
+/*skalere det slikt at det passer mobile*/
+                    #ourcompanybox{
+                        top: 69%;
+                        left: 50%;
+                        width: 300px;
+                        height: 120px;
+                    }
+/*skalere det slikt at det passer mobile*/
+                    #ourcompanybox p{
+                        font-size: xx-small;
+                        width: 200px;
+                    }
+/*skalere det slikt at det passer mobile*/
+                    #ourcompanybox h1{
+                        font-size: small;
+                        width: 200px;
+                    }
+/*skalere det slikt at det passer mobile*/
+                    #ourcompanybox a{
+                        font-size: xx-small;
+                        width: 200px;
+                    }
+/*skalere det slikt at det passer mobile*/
+                    .headline{
+                        top: 430px;
+
+
+                    }
+/*skalere det slikt at det passer mobile og få de under hverandre*/
+                  #contact-container{
+                    display: flex;
+                    flex-direction: column;
+                  }
+
+               
+
+                
+/*skalere det slikt at det passer mobile*/
+                .headline h1{
+                    font-size: medium;
+                   
+                }
+/*skalere det slikt at det passer mobile*/
+                .headline p{
+                    font-size: small;
+               
+                }
+/*skalere det slikt at det passer mobile*/
+                .engaging p{
+                    font-size: small;
+
+                }
+/*skalere det slikt at det passer mobile*/
+                .Read-more {
+                    font-size: xx-small;
+          
+                }
+/*skalere det slikt at det passer mobile*/
+                .explore h2{
+                    text-align: center;
+                    margin-left: 35%;
+                }
+                /*skalere det slikt at det passer mobile*/
+                .explore h4{
+                    font-weight: 800;
+                    font-size: xx-large;
+                    margin-left:11% ;
+                }
+                /*når det blir mobile, forsvinner video*/
+                #backgroundvideo{
+                    filter: opacity(0); }
+                    /*når det blir mobile, forsvinner video og med dette erstatter det videoen med vanlig bilde.    https://chat.openai.com/*/
+                 
+                    .compelingheadline{
+                       
+                  
+                        background-image: url('pictures/pexels-veeterzy-303383.jpg'); 
+                        background-size: cover;
+                        filter: opacity(40%);
+                       }
+                        /*fjerner hover effects fra desktop som passer oppgavekravet for karakter A*/
+                       .contactborder:hover{
+                        border-color: #e6bd43;
+                        background-color: #e6bd43;
+                        color: black;
+                       }
+                        /*fjerner hover effects fra desktop som passer oppgavekravet for karakter A*/
+                       #ourcompanybox a:hover{
+                        color: black;
+                    }
+ /*fjerner hover effects fra desktop som passer oppgavekravet for karakter A*/
+                    .Read-more:hover{
+                        border-color: white;
+                     background-color: white;
+                     color: black;
+                    }
+ /*fjerner hover effects fra desktop som passer oppgavekravet for karakter A*/
+                    .pictures:hover{
+                        transform: scale(1)
+                    }
+ /*fjerner hover effects fra desktop som passer oppgavekravet for karakter A*/
+                    .rmabout:hover{
+                        border-color: white;
+                        background-color: white;
+                        color: black;
+                    }
+ /*fjerner hover effects fra desktop som passer oppgavekravet for karakter A*/
+                    .contactbtn:hover {
+                        background-color: #e6bd43;
+                        color: black;
+                    }
+ /*fjerner hover effects fra desktop som passer oppgavekravet for karakter A*/
+                    .explorebtn:hover{
+                        border-color: white;
+                     background-color: white;
+                     color: black;
+
+                     }
+                    
+
+                    }
+                
+
+                
+
+            
+
+                
+                
+                
+
+                
+                    
+                
+
+               
+
+
+                
+
+              
+
+                
+        
+        

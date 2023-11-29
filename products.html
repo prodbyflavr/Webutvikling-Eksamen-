@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+ <!-- begynner med doctype -->
+ <!-- html lang i engelsk og microdata for selve webpage. foreslått av ChatGPT-->
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+<head>
+     <!-- Meta tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Jan Luis Aragon Ferrer">
+     <!-- meta tagsene her har 
+        jeg hentet fra tidligere oppgaver og 
+        fra nettsider som meta for developers og w3schools sitt metadatakurs.
+    https://developers.facebook.com/docs/marketing-api/catalog/guides/microdata-tags
+ https://www.w3schools.com/tags/tag_meta.asp-->
+    <meta property="og:title" content="Iloceam pleam shop">
+    <meta property="og:description" content="Iloceam pleam shop where we sell everything">
+    <meta property="og:image" content="https://static0.anpoimages.com/wordpress/wp-content/uploads/2023/04/google-pixel-7-pro-macbook-pro.jpg">
+     <!-- Fonts and Favicon har hentet font fra google fonts for å gjøre krav-->
+    <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    <link rel="icon" type="image/x-icon" href="css/pictures/icons8-favicon-48.png">
+    <link href="css/fontawesome-free-6.4.2-web/css/fontawesome.css" rel="stylesheet">
+  <link href="css/fontawesome-free-6.4.2-web/css/brands.css" rel="stylesheet">
+  <link href="css/fontawesome-free-6.4.2-web/css/solid.css" rel="stylesheet">
+    <!-- Normalize CSS -->
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <title>Product Page</title>
+</head>
+<body>
+     <!-- grid container som jeg har stylet inn i css med det som er nødvendig for krav -->
+    <div id="grid-container">
+          <!-- Skip link for accessibility -->
+        <a href="#up" id="skip-link"><i class="fa-solid fa-arrow-up"></i></a>
+           <!--  nav  med microdata -->
+            <!--  egen id for header for skipknapp -->
+        <header id="up">
+        <nav role="navigation" aria-label="Main Navigation">
+            <a href="index.html">
+            <img class="logo" src="css/ressurser/ressurser/logo1.png" alt="Logo Picture for Website" itemprop="image"> 
+        </a>
+          <ul class="navbar">
+            <li><a href="index.html">Home</a></li>
+            <li><a id="products" href="products.html">Portfolio</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="about.html#contact-container" class="contactborder">Contact</a></li>
+    </ul>
+</nav>
+    </header>
+       <!-- Main content med microdata -->
+    <main itemprop="mainContentOfPage" itemscope itemtype="http://schema.org/WebPageElement">
+    <section class="portfolio">
+        <img class="pictureofphone" src="css/pictures/google-pixel-7-pro-macbook-pro.avif" alt="Picture of googlepixel" itemprop="image"> 
+        <div class="textoverpic"> 
+            <h3>Portofolio</h3>   
+            </div>
+            </section>
+             <!-- Tok fra index og endret det-->
+<section class="explore">
+    <h4>Explore previous jobs</h4>
+</section>
+ <!-- knappene du finner over. aria-rolle er foreslått av chatgpt-->
+<section class="explorebuttons"  role="region" aria-label="Explore previous jobs">
+<a href="#branding" class="explorebtn">Branding</a>
+<a href="#design" class="explorebtn">Design</a>
+<a href="#development" class="explorebtn">Development</a>
+</section>
+  <!-- her har jeg delt opp class og id. 
+    samme class på alle men delt ulikt med id. se css for mer informasjon-->
+<section class="explore" id="branding">
+    <h2>Branding</h2>
+    </section>
+     <!-- artikkelkortene. brukt placeholders. aria role er foreslått av chatgpt-->
+    <section class="three" role="group" aria-label="Branding Images">
+        <article class="pictures">
+            <img class="box" src="https://placehold.co/400x400/lightgrey/lightgrey" alt="placeholder for picture">
+            <p><strong>Et harum quidem</strong></p>
+        </article>
+        <article class="pictures">
+            <img class="box" src="https://placehold.co/400x400/lightgrey/lightgrey" alt="placeholder for picture">
+            <p><strong>Et harum quidem</strong></p>
+        </article>
+        <article class="pictures">
+            <img class="box" src="https://placehold.co/400x400/lightgrey/lightgrey" alt="placeholder for picture">
+            <p><strong>Et harum quidem</strong></p>
+        </article>
+    </section>
+    <section class="pictures2">
+        <article class="pictures">
+            <img class="box" src="https://placehold.co/500x500/lightgrey/lightgrey" alt="placeholder for picture">
+            <p><strong>Et harum quidem</strong></p>
+        </article>
+    </section>
+    <section class="explore" id="design">
+        <h2>Design</h2>
+        </section>
+        <section class="three">
+            <article class="pictures">
+                <img class="box" src="https://placehold.co/400x400/lightgrey/lightgrey" alt="placeholder for picture">
+                <p><strong>Et harum quidem</strong><p>
+            </article>
+            <article class="pictures">
+                <img class="box" src="https://placehold.co/400x400/lightgrey/lightgrey" alt="placeholder for picture">
+                <p><strong>Et harum quidem</strong></p>
+            </article>
+            <article class="pictures">
+                <img class="box" src="https://placehold.co/400x400/lightgrey/lightgrey" alt="placeholder for picture">
+                <p><strong>Et harum quidem</strong></p>
+            </article>
+        </section>
+    <section class="explore"  id="development">
+        <h2>Development</h2>
+        </section>
+        <section class="pictures3">
+            <article class="pictures">
+                <img class="box" src="https://placehold.co/500x500/lightgrey/lightgrey" alt="placeholder for picture">
+                <p><strong>Et harum quidem</strong></p>
+            </article>
+            <article class="pictures">
+                <img class="box" src="https://placehold.co/500x500/lightgrey/lightgrey" alt="placeholder for picture">
+                <p><strong>Et harum quidem</strong></p>
+            </article>
+            </section>
+
+        
+         
+        </main>
+          <!-- footer section-->
+        <footer>
+            <a href="index.html">
+                <img class="logo" src="css/ressurser/ressurser/logo1.png" alt="Logo Picture for Website"> 
+            </a>
+    
+        <h6>Company copyright 2023</h6>
+          <!-- aria labels her var det chatGPT som foreslo-->
+        <section class="iconsright">
+            <a href="https://www.facebook.com" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://www.instagram.com" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+    </section>
+        </footer>
+    </div>
+        </body>

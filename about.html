@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+ <!-- begynner med doctype -->
+ <!-- html lang i engelsk og microdata for selve webpage. foreslått av ChatGPT-->
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+<head>
+     <!-- Meta tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Jan Luis Aragon Ferrer">
+     <!-- meta tagsene her har 
+        jeg hentet fra tidligere oppgaver og 
+        fra nettsider som meta for developers og w3schools sitt metadatakurs.
+    https://developers.facebook.com/docs/marketing-api/catalog/guides/microdata-tags
+ https://www.w3schools.com/tags/tag_meta.asp-->
+    <meta property="og:title" content="About page for Iloceam Pleam">
+    <meta property="og:description" content="About Iloceam Pleam">
+    <meta property="og:image" content="https://static0.anpoimages.com/wordpress/wp-content/uploads/2023/04/google-pixel-7-pro-macbook-pro.jpg">
+     <!-- Fonts and Favicon har hentet font fra google fonts for å gjøre krav-->
+    <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    <link rel="icon" type="image/x-icon" href="css/pictures/icons8-favicon-48.png">
+    <link href="css/fontawesome-free-6.4.2-web/css/fontawesome.css" rel="stylesheet">
+  <link href="css/fontawesome-free-6.4.2-web/css/brands.css" rel="stylesheet">
+  <link href="css/fontawesome-free-6.4.2-web/css/solid.css" rel="stylesheet">
+   <!-- Normalize CSS -->
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <title>About Page</title>
+</head>
+<body>
+    <!-- grid container som jeg har stylet inn i css med det som er nødvendig for krav -->
+    <div id="grid-container">
+         <!-- Skip link for accessibility -->
+        <a href="#up" id="skip-link"><i class="fa-solid fa-arrow-up"></i></a>
+         <!--  nav  med microdata -->
+            <!--  egen id for header for skipknapp -->
+        <header id="up">
+            <nav role="navigation" aria-label="Main Navigation">
+                <a href="index.html">
+                <img class="logo" src="css/ressurser/ressurser/logo1.png" alt="Logo Picture for Website" itemprop="image"> 
+            </a>
+              <ul class="navbar">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Portfolio</a></li>
+                <li><a id="about" href="about.html">About</a></li>
+                <li><a href="about.html#contact-container" class="contactborder">Contact</a></li>
+        </ul>
+    </nav>
+        </header>
+         <!-- Main content med microdata -->
+        <main itemprop="mainContentOfPage" itemscope itemtype="http://schema.org/WebPageElement">
+
+              <!-- Samme ide fra index. delt opp i forskjellig classes. class for bilde av telefon -->
+
+        <section class="pictureofphoneborder" role="region" aria-label="Company Overview">
+                <img class="pictureofphone4" src="css/pictures/google-pixel-7-pro-macbook-pro.avif" alt="Picture of googlepixel" itemprop="image"> 
+
+                  <!-- Her er boksen for about page. ved litt hjelp av chatGPT med contact-container.
+                -->
+                <section id="ourcompanybox">
+                    <p>Your Company Name</p>
+                    <h1 id="m">About our company</h1>
+                    <p class="lorem">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+                    <a href="#contact-container" class="contactborder">Get in touch with us</a>
+                </section>
+            </section>
+             <!-- her er overskriften for our services
+                -->
+            <section id="our-services" role="region" aria-label="Our Services">
+                    <h4>Our Services</h4>
+                </section>
+                <!-- our services articles i section four. role region var foreslått av chatGPT. delt opp i samme classes. se css for forklaring.-->
+                <section class="four" role="region" aria-label="Branding, Design, Development, Support">
+                    <article class="branding">
+                        <i class="fa-solid fa-people-group"></i>
+                        <h5>Branding</h5>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
+                    </article>
+                    <article class="branding">
+                        <i class="fa-solid fa-cloud-arrow-up"></i>
+                        <h5>Design</h5>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
+                    </article>
+                    <article class="branding">
+                        <i class="fa-solid fa-code"></i>
+                        <h5>Development</h5>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
+                    </article>
+                    <article class="branding">
+                        <i class="fa-solid fa-wifi"></i>
+                        <h5>Support</h5>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
+                        </article>
+                </section>
+                <!-- Som of our clients section. med logo under. 
+                -->
+                <section class="someof" role="region" aria-label="Some of Our Clients">
+                    <article class="someofbox">
+                    <h5>Some of our clients</h5>
+                </article>
+                    <section class="clients">
+                    <img class="logo" src="css/ressurser/ressurser/logo1.png" alt="Picture of logo of a company">
+                    <img class="logo" src="css/ressurser/ressurser/logo2.png" alt="Picture of logo of a company">
+                    <img class="logo" src="css/ressurser/ressurser/logo3.png" alt="Picture of logo of a company">
+             </section>
+                </section>
+              <!-- Kontaktsjema. Dette har jeg hentet fra w3schools https://www.w3schools.com/howto/howto_css_contact_form.asp-->
+                <section id="contact-container" role="region" aria-label="Contact Information">
+                    <article class="formbox">
+                        <h6>Send us a message</h6>
+                        <form>
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" placeholder="Ola Nordmann..">
+    
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject" placeholder="Branding..">
+    
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" placeholder="Your message.."></textarea>
+                            <button class="contactbtn" type="submit">Send message</button>
+                        </form>
+                    </article>
+                     <!-- Kontaktsjema delt opp i to articles. en for venstre side og en for høyre-->
+                    <article id="info-box">
+                        <h6>Contact information</h6>
+                        <p>Lorem ipsum dolor sit amet.</p>
+                        <article class="contact-us-box">
+                            <span class="spacing"><i class="fa-solid fa-location-pin"></i></span>
+                            <p>B R A Veien 4, 1757 Halden</p>
+                            <span class="spacing"><i class="fa-solid fa-phone"></i></span>
+                            <p>69 60 80 00</p>
+                            <span class="spacing" ><i class="fa-solid fa-envelope"></i></span>
+                            <p class="spacing">postmottak@hiof.no</p> 
+                        </article>
+                    </article>
+                </section>
+                 <!-- section for google maps-->
+                <section class="maps" role="region" aria-label="Location on Map">
+                    <iframe class="maps" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5790.633427495815!2d11.348660547212534!3d59.1274151992791!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x464412f0d344246f%3A0x4e47f19c99b253b1!2s%C3%98stfold%20University%20College!5e0!3m2!1sen!2sno!4v1701045508256!5m2!1sen!2sno" 
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </section>
+    </main>
+    <footer>
+        <a href="index.html">
+            <img class="logo" src="css/ressurser/ressurser/logo1.png" alt="Logo Picture for Website"> 
+        </a>
+
+    <h6>Company copyright 2023</h6>
+    <section class="iconsright">
+         <!-- aria-labels foreslått av chatgpt-->
+        <a href="https://www.facebook.com" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+        <a href="https://www.instagram.com" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://www.linkedin.com/" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+</section>
+    </footer>
+
+</div>  <!-- slutten av div-->
+</body>
